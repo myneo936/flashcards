@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1{
+    color:whitesmoke;
+}
+body{
+    background-color: white;
+}
+head{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th, td {
+  padding: 15px;
+}
+a:link, a:visited {
+  background-color: rgb(30, 255, 0);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: blue;
+}
+image{
+    align-content: center;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+    <link rel="stylesheet" href="mystyles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #ans{display: none;}
+    </style>
+    <title>Document</title>
+</head>
+<center>
+<body>
+   
+    <div id="card">
+        <h2>Your question</h2> 
+        <img src={{rows[3]}} alt="Image" style="width:500px;height:600px;">
+        <br>
+        <form method="POST">
+        <label for="">Enter your Answer</label>
+        <input type="text" name="answer" value="" required>
+        <input type="button" value="Check" onclick="show()">
+        </form>
+        <h5 id="ans">Correct Answer: {{rows[0]}}<br>Also know<br>Population: {{rows[1]}}<br>Area: {{rows[2]}}</h5><br>
+    </div>
+    
+    <br><br>
+    <form action="/review" method="get">
+        <div class="">
+            <label for="">Select Difficulty: </label>
+    
+            <input type="radio" name="hardness" value="easy" required>
+            <label for="">Easy</label>
+    
+            <input type="radio" name="hardness" value="medium">
+            <label for="">Medium</label>
+    
+            <input type="radio" name="hardness" value="hard">
+            <label for="">Hard</label>
+        </div>
+        <br>
+        <input type="submit" value="Submit Response">
+    </form>
+    <hr>
+    <a href="/addcard">Add Card</a>
+    <br>
+    <a href="/dashboard">Go to Dashboard</a>
+    <script>
+        function show(){
+            document.getElementById("ans").style.display="block"
+        }
+    </script>
+</body>
+</center>
+</html>

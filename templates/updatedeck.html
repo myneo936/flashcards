@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1{
+    color:whitesmoke;
+}
+body{
+    background-color: white;
+}
+head{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th, td {
+  padding: 15px;
+}
+a:link, a:visited {
+  background-color: rgb(30, 255, 0);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: blue;
+}
+image{
+    align-content: center;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+    <link rel="stylesheet" href="mystyles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<center>
+<body>
+    <form action="/updatedeck" method="post">
+        <label for="">Country Name</label>
+        <input type="text" name="Current"required><br>
+        <br>
+        <label for="">New Name</label>
+        <input type="text" name="c_name"required>
+        <br>
+        <label for="">Give link for the image:</label>
+        <input type="text" name="c_image"required><br><br>
+        <label for="">Population: </label>
+        <input type="number" name="c_population"required><br><br>
+        <label for="">Area:(in sq. miles) </label>
+        <input type="number" name="c_area"required><br><br>
+        <hr>
+        <input type="submit" value="Update">
+    </form>
+    <a href="/dashboard">Go to Dashboard</a>
+</body>
+</center>
+</html>

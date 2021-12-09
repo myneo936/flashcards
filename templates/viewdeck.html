@@ -1,0 +1,82 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+h1{
+    color:whitesmoke;
+}
+body{
+    background-color: white;
+}
+head{
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+}
+th, td {
+  padding: 15px;
+}
+a:link, a:visited {
+  background-color: rgb(30, 255, 0);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover, a:active {
+  background-color: blue;
+}
+image{
+    align-content: center;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+    <link rel="stylesheet" href="mystyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Deck</title>
+</head>
+<center>
+<body>
+    <h2>View Deck</h2>
+    <table>
+  <tr>
+    <th>Country Name</th>
+    <th>Population</th>
+    <th>Area</th>
+    <th>Image</th>
+  </tr>
+  {%for row in rows%}
+  <tr>
+    <td>{{row[0]}}</td>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td><a href ={{row[3]}}>View Image</a></td>
+  </tr>
+  {%endfor%}
+  <p><a href="/dashboard">Go to Dashboard</a></p>
+</body>
+</center>
+</html>
